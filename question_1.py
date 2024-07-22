@@ -7,9 +7,11 @@ allitems_foodenergy_csv = "allitems_foodenergy.csv"
 gasoline_csv = "gasoline.csv"
 
 #importing data from csv files
-allitems_df = pd.read_csv(allitems_csv)
-allitems_foodenergy_df = pd.read_csv(allitems_foodenergy_csv)
-gasoline_df = pd.read_csv(gasoline_csv)
+allitems_df = pd.read_csv(allitems_csv, parse_dates=["Label"])
+
+allitems_foodenergy_df = pd.read_csv(allitems_foodenergy_csv, parse_dates=["Label"])
+gasoline_df = pd.read_csv(gasoline_csv, parse_dates=["Label"])
+
 
 
 allitems_df = allitems_df.drop(["Year","Period","Series ID"], axis = "columns")
