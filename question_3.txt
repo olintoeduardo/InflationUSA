@@ -1,0 +1,10 @@
+Describe in words how you would automate the process of extracting the data.
+
+To automate the process of extracting CPI data from the BLS website we can use the website's API to download the data from their servers, process it and customize it to our needs.
+
+The python code available in the question_3-api.py file would get the CPI All items data, seasonally adjusted, store it in a dataframe.
+
+However, even after registring in the webite to get an API key, there is a limitation of the amounts of requests (500 requests) and most importantly, the date period of the data. The maximum spread of time we can gather is 20 years time. Thus, if this represents a problem, we might need another solution. 
+
+Python has a library called Selenium used for complex web scraping and thus, automating processes of downloading and analyzing data from the web. With the code available in the file question_3-selenium.py we can the Python to click on the correct buttons to select the start and end dates from which we want the CPI data, update the page and then download the csv file into a pandas data frame.
+
