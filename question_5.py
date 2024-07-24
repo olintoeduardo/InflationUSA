@@ -2,10 +2,12 @@ from fastapi import FastAPI
 import pandas as pd
 
 app = FastAPI()
-#API request funcion
+
+#API request functions
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
 
 @app.get("/data/{data}")
 async def get_CPI_Data(data: str):

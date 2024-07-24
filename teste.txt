@@ -1,0 +1,21 @@
+Question 1
+The csv files were downloaded from the following links:
+https://data.bls.gov/dataViewer/view/timeseries/CUSR0000SA0
+https://data.bls.gov/dataViewer/view/timeseries/CUSR0000SA0L1E
+https://data.bls.gov/dataViewer/view/timeseries/CUSR0000SETB01 
+Then they were renamed to:
+allitems_foodenergy.csv
+allitems.csv
+gasoline.csv
+
+The file in which all data was stores accordingly is named InflationUSA.csv
+The non-existent values in all times/less food & energy and gasoline is due to the lack of their availability until a certain year (1957 and 1967 respectively).
+
+Question 3
+Attention to downloads path files, since a Mac OS was used and not a Windows OS.
+
+Question 5
+When running the code use the following terminal command (Linux or Mac OS):
+uvicorn question_5:app --reload
+
+Then click on the link http://127.0.0.1:8000 to access the root page, and http://127.0.0.1:8000/data/{data} , data being either gasoline, allItems or allItems-lessfood&energy to view each of CPI indexes data.
